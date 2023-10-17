@@ -1,0 +1,149 @@
+/* Réinitialisation de la mise en page de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Style de la liste des matchs */
+.match {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+    font-size: 1.4em; /* Augmentation de la taille de la police */
+    color: black; /* Écriture noire */
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+.simulate-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.simulate-button:hover {
+    background-color: red;
+}
+
+/* Ajout de l'image de fond à la partie principale */
+main::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/928px-Logo_RWC2023_FR.svg.png'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+    background-size: contain; /* Ajuste la taille de l'image pour couvrir tout le conteneur */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'image de fond pour qu'elle reste en place pendant le défilement */
+    background-position: center center; /* Centre l'image horizontalement et verticalement */
+    opacity: 0.1; /* Opacité de l'image de fond (70%) */
+    z-index: -1; /* Place l'élément en arrière-plan */
+}
+
+/* Style de la partie principale */
+main {
+    height: 80vh; /* Ajuste la hauteur à 100% de la hauteur de la vue (viewport) */
+    width: 100%; /* Ajuste la largeur à 100% de la largeur du parent (généralement la largeur de l'écran) */
+    position: relative; /* Définit la position à relative pour que les éléments dans main soient au premier plan */
+}
+
+
+/* Styles pour les drapeaux et noms de pays */
+.flag-container, .country-name-container {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.flag-left {
+    width: 1em;
+    height: 1em;
+    margin: -10px; /* Ajuste la hauteur des drapeaux en utilisant le padding */
+    padding: -300px
+}
+
+.flag-right {
+    width: 1em;
+    height: 1em;
+    margin: -17px; /* Ajuste la hauteur des drapeaux en utilisant le padding */
+}
+
+.country-name {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: black;
+    text-align: center;
+}
+
+/* Styles pour les écrans plus larges (par exemple, à partir de 1000px) */
+@media screen and (min-width: 1000px) {
+    .flag-left {
+        float: left;
+        margin-right: 300px;
+    }
+
+    .flag-right {
+        float: right;
+        margin-left: 300px;
+    }
+}
+
+nav.main-navigation {
+    background-color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+ul.navigation-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin: 0 10px;
+}
+
+a.navigation-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a.navigation-button:hover {
+    text-decoration: underline;
+}
+
+/* Style des titres de section */
+.section-title {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
